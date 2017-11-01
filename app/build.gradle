@@ -1,0 +1,62 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion '25.0.0'
+    defaultConfig {
+        applicationId "com.shuwo.fbol"
+        minSdkVersion 15
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    useLibrary 'org.apache.http.legacy'
+    android.applicationVariants.all { variant ->
+        variant.outputs.each { output ->
+            output.outputFile = new File(output.outputFile.parent,  "bet足球在线.apk" );
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:support-v4:23.3.0'
+    compile 'com.android.support:design:23.3.0'
+    compile 'com.android.support:appcompat-v7:23.3.0'
+    compile 'com.android.support:recyclerview-v7:23.3.0'
+    compile 'com.android.support:cardview-v7:23.3.0'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    testCompile 'junit:junit:4.12'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    //网络图片读取
+    compile 'com.nineoldandroids:library:2.4.0'
+    //网络图片读取
+    compile 'com.daimajia.slider:library:1.1.5@aar'
+    //上拉下拉框架    记得添加  maven { url "https://jitpack.io" }
+    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.28'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
+    //网页爬虫  截取webview框架
+    compile 'org.htmlparser:htmlparser:2.1'
+    compile 'com.dou361.dialogui:jjdxm-dialogui:1.0.3'
+    compile 'cn.pedant.sweetalert:library:1.3'
+    //自 Android第三方开源对话消息提示框：SweetAlertDialog   // 记得添加tools:replace="android:icon"
+    compile files('libs/jcore-android-1.1.7.jar')
+    compile files('libs/jpush-android-3.0.9.jar')
+    compile 'cn.bmob.android:bmob-sdk:3.5.7'
+}

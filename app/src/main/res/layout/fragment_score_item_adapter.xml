@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+   >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            >
+            <TextView
+                android:id="@+id/league_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="league_name"
+                android:textSize="13dp"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/match_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="match_time"
+                android:textSize="13dp"
+                android:textColor="@color/black"
+                android:layout_marginLeft="8dp"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            >
+
+            <TextView
+                android:id="@+id/tv_center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=":"
+                android:textSize="15dp"
+                android:textColor="@color/my_gray2"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_centerInParent="true"/>
+
+
+            <TextView
+                android:id="@+id/home_team_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="15dp"
+                android:textColor="@color/black"
+                android:layout_toLeftOf="@id/tv_center"
+                />
+            <TextView
+                android:id="@+id/home_team_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="home_team_name"
+                android:textSize="15dp"
+                android:textColor="@color/my_black"
+                android:layout_toLeftOf="@id/home_team_score"
+                android:layout_marginRight="5dp"
+                />
+
+            <TextView
+                android:id="@+id/h_yellow"
+                android:layout_width="10dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/home_team_name"
+                android:layout_toStartOf="@+id/home_team_name"
+                android:background="@color/yellow"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/black"
+                android:textSize="8dp"
+                android:layout_marginRight="3dp"
+                android:visibility="invisible"/>
+
+            <TextView
+                android:id="@+id/home_red_card"
+                android:layout_width="10dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/h_yellow"
+                android:layout_toStartOf="@+id/h_yellow"
+                android:background="@color/red"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/black"
+                android:textSize="8dp"
+                android:visibility="invisible"/>
+
+
+
+            <TextView
+                android:id="@+id/guest_team_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="15dp"
+                android:textColor="@color/black"
+                android:layout_toRightOf="@id/tv_center"
+                android:layout_marginRight="5dp"
+                />
+
+            <TextView
+                android:id="@+id/guest_team_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="guest_team_name"
+                android:textSize="15dp"
+                android:textColor="@color/black"
+                android:layout_toRightOf="@id/guest_team_score"/>
+
+
+            <TextView
+                android:id="@+id/g_yellow"
+                android:layout_width="10dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/guest_team_name"
+                android:background="@color/yellow"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/black"
+                android:textSize="8dp"
+                android:layout_marginLeft="3dp"
+                android:visibility="invisible"/>
+
+            <TextView
+                android:id="@+id/guest_red_card"
+                android:layout_width="10dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/g_yellow"
+                android:background="@color/red"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/black"
+                android:textSize="8dp"
+                android:visibility="invisible"/>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp">
+
+            <TextView
+                android:id="@+id/tv_center2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text=":"
+                android:textColor="@color/my_gray2"
+                android:textSize="15dp"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/asian_odds"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/tv_center2"
+                android:layout_toStartOf="@+id/tv_center2"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/my_gray2"
+                android:textSize="10dp" />
+
+            <TextView
+                android:id="@+id/europe_odds"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:layout_toRightOf="@+id/tv_center2"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/my_gray2"
+                android:textSize="10dp"
+                />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/my_gray3"
+     ></View>
+    
+    
+</LinearLayout>

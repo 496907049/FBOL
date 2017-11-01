@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+   >
+
+ <include
+     layout="@layout/back_and_title"
+     android:layout_width="match_parent"
+     android:layout_height="40dp">
+ </include>
+
+    <WebView
+        android:id="@+id/wv_act"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible">
+    </WebView>
+
+
+    <!--<com.shuwo.fbol.widget.ScrollWebView-->
+        <!--android:id="@+id/wv_act"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent">-->
+    <!--</com.shuwo.fbol.widget.ScrollWebView>-->
+
+
+</LinearLayout>
